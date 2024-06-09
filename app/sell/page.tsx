@@ -13,7 +13,7 @@ import { TipTapEditor } from "../_components/Editor";
 
 const SellRoute = () => {
   return (
-    <section className="mx-auto max-w-7xl px-4 md:px-8">
+    <section className="mx-auto mb-14 max-w-7xl px-4 md:px-8">
       <Card>
         <form>
           <CardHeader>
