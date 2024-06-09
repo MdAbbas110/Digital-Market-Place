@@ -10,6 +10,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import Link from "next/link";
+import SellRoute from "../sell/page";
 
 interface UserDetails {
   name: string;
@@ -40,6 +42,9 @@ const UserNav = ({ name, email, userImg }: UserDetails) => {
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
+            <DropdownMenuItem asChild>
+              <Link href={"/sell"}>Sell your product</Link>
+            </DropdownMenuItem>
             <DropdownMenuItem>test</DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
