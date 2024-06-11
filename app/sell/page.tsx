@@ -2,6 +2,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -10,6 +11,8 @@ import { Label } from "@/components/ui/label";
 import SelectCategory from "../_components/SelectCategory";
 import { Textarea } from "@/components/ui/textarea";
 import { TipTapEditor } from "../_components/Editor";
+import { UploadDropzone } from "../utils/uploadThing";
+import { Button } from "@/components/ui/button";
 
 const SellRoute = () => {
   return (
@@ -40,10 +43,23 @@ const SellRoute = () => {
               <Textarea placeholder="Please describe the product shortly right here..." />
             </div>
             <div className="flex flex-col gap-y-2">
-              <Label>Small Summary 2</Label>
+              <Label>Description</Label>
               <TipTapEditor />
             </div>
+
+            <div className="flex flex-col gap-y-2">
+              <Label>Product Images</Label>
+              <UploadDropzone endpoint="imageUploader" />
+            </div>
+
+            <div className="flex flex-col gap-y-2">
+              <Label>Product zip file</Label>
+              <UploadDropzone endpoint="zipFileUploader" />
+            </div>
           </CardContent>
+          <CardFooter className="mt-5">
+            <Button>Submit Product</Button>
+          </CardFooter>
         </form>
       </Card>
     </section>
