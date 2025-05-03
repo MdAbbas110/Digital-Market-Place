@@ -1,0 +1,4 @@
+interface HelperProps {
+data: string
+
+}
